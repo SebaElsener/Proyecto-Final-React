@@ -30,12 +30,12 @@ const ItemDetail = ( {producto, id} ) => {
                 <>
                     {msjOnAdd('Por favor, seleccione una o más unidades de este producto')}
                 </>
-            )} else {
-                <>
-                    {msjOnAdd('Producto añadido al carrito')}
-                </>
-                const prodConId = { ...producto, id: id }
-                addItem(prodConId, cantidad)
+        )} else {
+            <>
+                {msjOnAdd('Producto añadido al carrito')}
+            </>
+            const prodConId = { ...producto, id: id }
+            addItem(prodConId, cantidad)
         }
     }
         
