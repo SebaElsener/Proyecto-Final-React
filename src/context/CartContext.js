@@ -16,9 +16,9 @@ const CartProvider = ({ children }) => {
 
   const borrarProducto = (id) => setCart(cart.filter(prod => prod.id !== id))
 
-  const precioTotal = () => cart.reduce((prev, act) => prev + act.cantidadComprada * act.price, 0)
+  const precioTotal = cart.reduce((prev, act) => prev + act.cantidadComprada * act.price, 0)
 
-  const cantidadTotal = () => cart.reduce((acum, prodActual) => acum + prodActual.cantidadComprada, 0)
+  const cantidadTotal = cart.reduce((acum, prodActual) => acum + prodActual.cantidadComprada, 0)
 
   return (
     <CartContext.Provider value={{

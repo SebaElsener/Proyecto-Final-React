@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import './ItemListContainer.css'
 import ItemList from './ItemList/ItemList'
 import { getFirestore, collection, query, where, getDocs } from 'firebase/firestore'
+import LoadingGif from '../LoadingGif/LoadingGif'
 
 function ItemListContainer({ greeting }) {
 
@@ -41,7 +42,7 @@ function ItemListContainer({ greeting }) {
     return (
         <div className='itemListContainer'>
             <h2 className='saludo'>{greeting}</h2>
-            <ItemList productos={products} />
+            {products.length === 0 ? <LoadingGif /> : <ItemList productos={products} />}
         </div>
     )
 }

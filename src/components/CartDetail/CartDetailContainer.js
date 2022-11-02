@@ -23,7 +23,7 @@ const CartDetailContainer = () => {
         <>
             {cart.map(prod => <CartDetail producto={prod} key={prod.id} />)}
             <div className='totalCompra'>
-                <p>Total de su compra: ${precioTotal()}</p>
+                <p>Total de su compra: ${precioTotal}</p>
                 <button className='vaciarCarrito' onClick={() => borrarCarrito()}>Vaciar carrito</button>
                 <Link to='/Checkout'><button className='terminarCompra'>Terminar compra</button></Link>
             </div>

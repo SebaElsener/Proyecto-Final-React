@@ -11,7 +11,7 @@ const CartWidget = () => {
     return (
         <>
             <img src={carrito} alt='logo carrito de compras' className='imgCarrito'></img>
-            <p className='cantidadItems'>{cantidadTotal()}</p>
+            <p className={cantidadTotal === 0 ? 'cantidadItems hidden' : 'cantidadItems'}>{cantidadTotal}</p>
         </>
     )
 }
